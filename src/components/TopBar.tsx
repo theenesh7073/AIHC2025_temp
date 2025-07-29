@@ -2,7 +2,7 @@ import { Calendar, MapPin } from "lucide-react";
 
 const TopBar = () => {
   return (
-    <div className="bg-primary text-primary-foreground py-2 px-4">
+    <div className="bg-primary text-primary-foreground py-1 px-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <span className="text-sm flex items-center">

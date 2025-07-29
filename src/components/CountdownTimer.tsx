@@ -10,7 +10,7 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     const updateCountdown = () => {
-      const conferenceDate = new Date('December 11, 2025 09:00:00').getTime();
+      const conferenceDate = new Date('December 10, 2025 09:00:00').getTime();
       const now = new Date().getTime();
       const distance = conferenceDate - now;
 

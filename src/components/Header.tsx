@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import nitcLogo from "@/assets/nitc-full-logo-white-01.svg";
+import nitcNewLogo from "@/assets/nitc-new.jpeg";
+import utahLogo from "@/assets/university-of-utah.jpeg";
+import aihcLogo from "@/assets/aihc-logo.png";
+import sparcLogo from "@/assets/sparc-logo.jpeg";
+import moeLogo from "@/assets/moe-logo.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,36 +19,82 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-card shadow-md pb-6 flex flex-col">
+    <header className="sticky top-0 z-50 bg-card shadow-md pb-1 flex flex-col">
       {/* Top Row: Logos and Title Centered */}
-      <div className="w-full bg-card py-4 flex justify-center items-center space-x-2 md:space-x-8">
+      <div className="w-full bg-card flex justify-center items-center space-x-3 md:space-x-6 lg:space-x-8 py-2">
         <img 
-          src={nitcLogo}
-          alt="NITC Full Logo" 
-          className="h-10 w-auto md:h-14"
+          src={nitcNewLogo}
+          alt="NITC Logo" 
+          className="h-20 w-auto md:h-6 lg:h-20"
           onError={(e) => {
-            console.error('Logo failed to load:', e);
+            console.error('NITC Logo failed to load:', e);
             e.currentTarget.style.display = 'none';
           }}
         />
-        <div className="flex flex-col items-center mx-2 md:mx-6">
-          <h1 className="text-lg md:text-3xl font-extrabold text-primary">AIHC 2025</h1>
-          <p className="text-xs md:text-lg text-muted-foreground text-center">International Conference on Artificial Intelligence for Healthcare</p>
-        </div>
-        {/* Removed green logo here */}
+        <img 
+          src={utahLogo}
+          alt="University of Utah Logo" 
+          className="h-6 w-auto md:h-6 lg:h-10"
+          onError={(e) => {
+            console.error('University of Utah Logo failed to load:', e);
+            e.currentTarget.style.display = 'none';
+          }}
+        />
+        <img 
+          src={aihcLogo}
+          alt="AIHC Logo" 
+          className="h-20 w-auto md:h-30 lg:h-30"
+          onError={(e) => {
+            console.error('AIHC Logo failed to load:', e);
+            e.currentTarget.style.display = 'none';
+          }}
+        />
+        <img 
+          src={sparcLogo}
+          alt="SPARC Logo" 
+          className="h-12 w-auto md:h-13 lg:h-14"
+          onError={(e) => {
+            console.error('SPARC Logo failed to load:', e);
+            e.currentTarget.style.display = 'none';
+          }}
+        />
+        <img 
+          src={moeLogo}
+          alt="Ministry of Education Logo" 
+          className="h-10 w-auto md:h-10 lg:h-13"
+          onError={(e) => {
+            console.error('Ministry of Education Logo failed to load:', e);
+            e.currentTarget.style.display = 'none';
+          }}
+        />
       </div>
       {/* Navbar Row */}
-      <div className="container mx-auto px-4 flex justify-center items-center pt-6 w-full relative">
+      <div className="container mx-auto px-4 flex justify-center items-center pt-1 w-full relative">
         <nav className="hidden md:block w-full">
           <ul className="flex space-x-6 items-center justify-center w-full">
             <li><a href="/" className="text-primary hover:text-accent font-medium transition-colors">Home</a></li>
-            <li><a href="/dummy-cfp.pdf" target="_blank" rel="noopener noreferrer" className="whitespace-nowrap text-primary hover:text-accent font-medium transition-colors">Call for Papers</a></li>
-            <li><a href="/sponsorship" className="text-primary hover:text-accent font-medium transition-colors">Sponsorship</a></li>
+            <li><a href="/AIHC 2025-12.pdf" target="_blank" rel="noopener noreferrer" className="whitespace-nowrap text-primary hover:text-accent font-medium transition-colors">Call for Papers</a></li>
+            <li><a href="/AIHC 2025_Brochure_For_Sponsorship.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent font-medium transition-colors">Sponsorship</a></li>
             <li><a href="/submission" className="text-primary hover:text-accent font-medium transition-colors">Submission</a></li>
             <li><a href="/workshops" className="text-primary hover:text-accent font-medium transition-colors">Workshops</a></li>
             <li><a href="/speakers" className="text-primary hover:text-accent font-medium transition-colors">Speakers</a></li>
             {/* <li><a href="#" className="text-primary hover:text-accent font-medium transition-colors">Program</a></li> */}
-            <li><a href="/committee" className="text-primary hover:text-accent font-medium transition-colors">Committee</a></li>
+            <li className="relative group">
+              <button 
+                onClick={() => toggleSubmenu('committee')}
+                className="text-primary hover:text-accent font-medium transition-colors flex items-center"
+              >
+                Committee
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              <div className={`absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-48 z-50 ${activeSubmenu === 'committee' ? 'block' : 'hidden'}`}>
+                <a href="/organizing-committee" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Organizing Committee</a>
+                <a href="/advisory-committee" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Advisory Committee</a>
+                <a href="/program-committee" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Program Committee</a>
+                <a href="/area-chairs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Area Chairs</a>
+              </div>
+            </li>
+            <li><a href="/accommodation" className="text-primary hover:text-accent font-medium transition-colors">Accommodation</a></li>
             <li><a href="/venue" className="text-primary hover:text-accent font-medium transition-colors">Venue</a></li>
             <li><a href="/visa" className="text-primary hover:text-accent font-medium transition-colors">Visa</a></li>
           </ul>
@@ -61,13 +111,28 @@ const Header = () => {
       <div className={`mobile-menu md:hidden bg-card ${isMobileMenuOpen ? 'open' : ''}`}> 
         <ul className="px-4 py-2 space-y-2">
           <li><a href="/" className="block py-2 text-primary hover:bg-secondary rounded">Home</a></li>
-          <li><a href="/dummy-cfp.pdf" target="_blank" rel="noopener noreferrer" className="whitespace-nowrap block py-2 text-primary hover:bg-secondary rounded">Call for Papers</a></li>
-          <li><a href="/sponsorship" className="block py-2 text-primary hover:bg-secondary rounded">Sponsorship</a></li>
+          <li><a href="/AIHC 2025-12.pdf" target="_blank" rel="noopener noreferrer" className="whitespace-nowrap block py-2 text-primary hover:bg-secondary rounded">Call for Papers</a></li>
+          <li><a href="/AIHC 2025_Brochure_For_Sponsorship.pdf" target="_blank" rel="noopener noreferrer" className="block py-2 text-primary hover:bg-secondary rounded">Sponsorship</a></li>
           <li><a href="/submission" className="block py-2 text-primary hover:bg-secondary rounded">Submission</a></li>
           <li><a href="/workshops" className="block py-2 text-primary hover:bg-secondary rounded">Workshops</a></li>
           <li><a href="/speakers" className="block py-2 text-primary hover:bg-secondary rounded">Speakers</a></li>
           <li><a href="#" className="block py-2 text-primary hover:bg-secondary rounded">Program</a></li>
-          <li><a href="/committee" className="block py-2 text-primary hover:bg-secondary rounded">Committee</a></li>
+          <li className="relative">
+            <button 
+              onClick={() => toggleSubmenu('committee-mobile')}
+              className="block py-2 text-primary hover:bg-secondary rounded flex items-center justify-between w-full"
+            >
+              Committee
+              <ChevronDown className="ml-1 h-4 w-4" />
+            </button>
+            <div className={`bg-gray-50 rounded-md ml-4 ${activeSubmenu === 'committee-mobile' ? 'block' : 'hidden'}`}>
+              <a href="/organizing-committee" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Organizing Committee</a>
+              <a href="/advisory-committee" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Advisory Committee</a>
+              <a href="/program-committee" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Program Committee</a>
+              <a href="/area-chairs" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Area Chairs</a>
+            </div>
+          </li>
+          <li><a href="/accommodation" className="block py-2 text-primary hover:bg-secondary rounded">Accommodation</a></li>
           <li><a href="/venue" className="block py-2 text-primary hover:bg-secondary rounded">Venue</a></li>
           <li><a href="/visa" className="block py-2 text-primary hover:bg-secondary rounded">Visa</a></li>
         </ul>

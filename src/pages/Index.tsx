@@ -3,6 +3,10 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import CountdownTimer from "@/components/CountdownTimer";
 import BackToTop from "@/components/BackToTop";
+import nitcNewLogo from "@/assets/nitc-new.jpeg";
+import utahLogo from "@/assets/university-of-utah.jpeg";
+import sparcLogo from "@/assets/sparc-logo.jpeg";
+import moeLogo from "@/assets/moe-logo.png";
 
 const Index = () => {
   return (
@@ -24,13 +28,13 @@ const Index = () => {
               <p className="text-muted-foreground mb-6">
                 Organized by the Computer Science & Engineering Department at NIT Calicut, the conference focuses on low-cost solutions for early cancer detection and radiotherapy treatment. We bring together academia, hospitals, and startups to bridge gaps through deployable prototypes for real-time patient support.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <a href="https://premi25.iitd.ac.in/calls/cfp.pdf" className="btn-primary">
+              <div className="flex flex-wrap gap-4 justify-center">
+                <a href="/AIHC 2025-12.pdf" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Call for Papers
                 </a>
-                <a href="https://premi25.iitd.ac.in/submission.html" className="btn-outline">
+                {/* <a href="https://premi25.iitd.ac.in/submission.html" className="btn-outline">
                   Submission Guidelines
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="md:w-1/2 grid grid-cols-2 gap-4">
@@ -50,14 +54,13 @@ const Index = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-center mb-2">When</h3>
-                <p className="text-muted-foreground text-center">11 - 14 December, 2025</p>
+                <p className="text-muted-foreground text-center">10 - 12 December, 2025</p>
               </div>
               <div className="conference-card col-span-2">
                 <h3 className="text-xl font-semibold text-center mb-4">Organized By</h3>
                 <div className="flex flex-wrap justify-center items-center gap-6">
-                  <img src="https://premi25.iitd.ac.in/images/logo.png" alt="IIT Delhi" className="h-16" />
-                  <img src="https://premi25.iitd.ac.in/images/isi-logo.png" alt="ISI Kolkata" className="h-16" />
-                  <img src="https://premi25.iitd.ac.in/images/iapr_logo.jpg" alt="IAPR" className="h-16" />
+                  <img src={nitcNewLogo} alt="NIT Calicut" className="h-16" />
+                  <img src={utahLogo} alt="University of Utah" className="h-16" />
                 </div>
               </div>
             </div>
@@ -71,23 +74,23 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-center text-primary mb-12">Conference Tracks</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="conference-card">
-              <h3 className="text-xl font-semibold mb-2 text-primary">Smart Computational Medicine (SCM)</h3>
+              <h3 className="text-xl font-semibold mb-2 text-primary">Smart Computational Medicine</h3>
               <p className="text-muted-foreground">AI applications in medical diagnosis and treatment planning</p>
             </div>
             <div className="conference-card">
-              <h3 className="text-xl font-semibold mb-2 text-primary">AI & Computer Vision (AICV)</h3>
+              <h3 className="text-xl font-semibold mb-2 text-primary">High Performance AI in Healthcare</h3>
+              <p className="text-muted-foreground">GPU-accelerated healthcare solutions and high-performance computing</p>
+            </div>
+            <div className="conference-card">
+              <h3 className="text-xl font-semibold mb-2 text-primary">AI & Computer Vision</h3>
               <p className="text-muted-foreground">Medical imaging analysis and diagnostic support systems</p>
             </div>
             <div className="conference-card">
-              <h3 className="text-xl font-semibold mb-2 text-primary">AI & NLP (AILP)</h3>
+              <h3 className="text-xl font-semibold mb-2 text-primary">AI & Natural Language Processing</h3>
               <p className="text-muted-foreground">Clinical text mining and healthcare documentation</p>
             </div>
-            <div className="conference-card">
-              <h3 className="text-xl font-semibold mb-2 text-primary">High-Performance AI (HPAI)</h3>
-              <p className="text-muted-foreground">GPU-accelerated healthcare solutions</p>
-            </div>
             <div className="conference-card md:col-span-2 lg:col-span-1">
-              <h3 className="text-xl font-semibold mb-2 text-primary">AI Blueprint: Data & Algorithms (AIDA)</h3>
+              <h3 className="text-xl font-semibold mb-2 text-primary">AI & Bioinformatics</h3>
               <p className="text-muted-foreground">Healthcare data analytics and algorithm development</p>
             </div>
           </div>
@@ -101,28 +104,28 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="date-card">
               <h3 className="text-xl font-semibold mb-2">Submission Deadline</h3>
-              <p className="text-muted-foreground mb-2">31st July, 2025</p>
+              <p className="text-muted-foreground mb-2">31st August, 2025</p>
               <div className="progress-bar">
                 <div className="progress-fill" style={{ width: '25%' }}></div>
               </div>
             </div>
             <div className="date-card">
               <h3 className="text-xl font-semibold mb-2">Acceptance Notification</h3>
-              <p className="text-muted-foreground mb-2">15th August, 2025</p>
+              <p className="text-muted-foreground mb-2">15th October, 2025</p>
               <div className="progress-bar">
                 <div className="progress-fill" style={{ width: '15%' }}></div>
               </div>
             </div>
             <div className="date-card">
               <h3 className="text-xl font-semibold mb-2">Camera Ready Submission</h3>
-              <p className="text-muted-foreground mb-2">15th September, 2025</p>
+              <p className="text-muted-foreground mb-2">1st November, 2025</p>
               <div className="progress-bar">
                 <div className="progress-fill" style={{ width: '10%' }}></div>
               </div>
             </div>
             <div className="date-card">
-              <h3 className="text-xl font-semibold mb-2">Early Bird Registration</h3>
-              <p className="text-muted-foreground mb-2">31st October, 2025</p>
+              <h3 className="text-xl font-semibold mb-2">Conference</h3>
+              <p className="text-muted-foreground mb-2">10-12 December, 2025</p>
               <div className="progress-bar">
                 <div className="progress-fill" style={{ width: '5%' }}></div>
               </div>
@@ -136,12 +139,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-primary mb-12">Conference Partners</h2>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            <img src="https://premi25.iitd.ac.in/images/iapr_logo.jpg" alt="IAPR" className="h-16 md:h-20" />
-            <img src="https://premi25.iitd.ac.in/images/logo.png" alt="IIT Delhi" className="h-16 md:h-20" />
-            <img src="https://premi25.iitd.ac.in/images/isi-logo.png" alt="ISI" className="h-16 md:h-20" />
-            <img src="https://premi25.iitd.ac.in/images/PReMI.png" alt="PReMI" className="h-16 md:h-20" />
-            <img src="https://premi25.iitd.ac.in/images/irss_logo.png" alt="IRSS" className="h-16 md:h-20" />
-            <img src="https://premi25.iitd.ac.in/images/iuprai_logo.png" alt="IUPRAI" className="h-16 md:h-20" />
+            <img src={sparcLogo} alt="SPARC" className="h-16 md:h-20" />
+            <img src={nitcNewLogo} alt="NIT Calicut" className="h-16 md:h-20" />
+            <img src={utahLogo} alt="University of Utah" className="h-16 md:h-20" />
+            <img src={moeLogo} alt="Ministry of Education" className="h-16 md:h-20" />
           </div>
         </div>
       </section>
@@ -152,16 +153,16 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="text-xl font-bold mb-4">AIHC 2025</h3>
-              <p className="mb-4">International Conference on Artificial Intelligence for Healthcare</p>
+              <h4 className="mb-4">International Conference on Artificial Intelligence for Healthcare</h4>
               <p>NIT Calicut in collaboration with SPARC, Government of India and University of Utah</p>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="hover:text-accent transition-colors">Home</a></li>
-                <li><a href="https://premi25.iitd.ac.in/calls/cfp.pdf" className="hover:text-accent transition-colors">Call for Papers</a></li>
-                <li><a href="https://premi25.iitd.ac.in/submission.html" className="hover:text-accent transition-colors">Submission</a></li>
-                <li><a href="https://premi25.iitd.ac.in/workshops.html" className="hover:text-accent transition-colors">Workshops</a></li>
+                <li><a href="/AIHC 2025-12.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Call for Papers</a></li>
+                <li><a href="/submission" className="hover:text-accent transition-colors">Submission</a></li>
+                <li><a href="/workshops" className="hover:text-accent transition-colors">Workshops</a></li>
               </ul>
             </div>
             <div>
@@ -170,13 +171,13 @@ const Index = () => {
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-                contact@premi25.iitd.ac.in
+                aihc2025@nitc.ac.in
               </p>
               <p className="flex items-center">
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                 </svg>
-                Indian Institute of Technology Delhi, India
+                National Institute of Technology Calicut, India
               </p>
             </div>
             <div>
@@ -206,7 +207,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-primary/20 pt-8 text-center">
-            <p>Copyright © 2025 All rights reserved Indian Institute of Technology Delhi</p>
+            <p>Copyright © 2025 All rights reserved National Institute of Technology Calicut</p>
           </div>
         </div>
       </footer>

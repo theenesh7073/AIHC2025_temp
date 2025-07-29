@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
 import BackToTop from "@/components/BackToTop";
 
-const Committee = () => {
+const OrganizingCommittee = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <TopBar />
@@ -10,7 +10,7 @@ const Committee = () => {
       {/* Hero Section */}
       <section className="bg-[#2c2c7a] text-white py-16 text-center relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">AIHC Organizing Committee</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Organizing Committee</h1>
         </div>
       </section>
       {/* Committee Members Placeholder */}
@@ -34,4 +34,4 @@ const Committee = () => {
   );
 };
 
-export default Committee; 
+export default OrganizingCommittee; 
