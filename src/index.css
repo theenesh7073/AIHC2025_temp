@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AIHC 2025 Conference Design System */
+
+@layer base {
+  :root {
+    /* Conference Brand Colors */
+    --conference-blue: 220 50% 18%;       /* Deep navy blue */
+    --conference-blue-light: 220 50% 25%; /* Lighter navy */
+    --conference-blue-dark: 220 55% 12%;  /* Darker navy */
+    --conference-accent: 215 84% 60%;     /* Bright blue accent */
+    
+    /* System Colors */
+    --background: 0 0% 97%;
+    --foreground: 220 50% 18%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 220 50% 18%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 50% 18%;
+    
+    --primary: 220 50% 18%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 220 20% 95%;
+    --secondary-foreground: 220 50% 18%;
+    
+    --muted: 220 20% 95%;
+    --muted-foreground: 220 10% 40%;
+    
+    --accent: 215 84% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 220 50% 18%;
+    
+    --radius: 0.5rem;
+    
+    /* Conference Specific */
+    --hero-overlay: 0 0% 0%;
+    --progress-bg: 220 20% 90%;
+    --countdown-bg: 220 50% 18%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 50% 18% / 0.8), hsl(220 55% 12% / 0.9));
+    --gradient-button: linear-gradient(135deg, hsl(220 50% 25%), hsl(220 50% 18%));
+    
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease-out;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  /* Conference Hero Slider */
+  .hero-slider {
+    animation: slide 15s infinite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Dropdown Animations */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  .dropdown-menu {
+    @apply bg-card border border-border shadow-lg rounded-lg z-50;
+  }
+  
+  /* Mobile Menu Animation */
+  .mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .mobile-menu.open {
+    max-height: 1000px;
+  }
+  
+  /* Countdown Timer */
+  .countdown-item {
+    position: relative;
+  }
+  
+  .countdown-item:not(:last-child):after {
+    content: ":";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium transition-colors duration-300;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary hover:bg-primary hover:text-primary-foreground text-primary px-6 py-3 rounded-md font-medium transition-colors duration-300;
+  }
+  
+  .btn-white-outline {
+    @apply border-2 border-white hover:bg-white hover:text-primary text-white px-6 py-3 rounded-md font-medium transition-colors duration-300;
+  }
+  
+  /* Card Styles */
+  .conference-card {
+    @apply bg-secondary/30 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  .date-card {
+    @apply bg-card p-6 rounded-lg shadow-md border-t-4 border-primary hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    @apply w-full bg-muted rounded-full h-2.5;
+  }
+  
+  .progress-fill {
+    @apply bg-accent h-2.5 rounded-full transition-all duration-500;
+  }
+}
+
+@layer utilities {
+  /* Animation Keyframes */
+  @keyframes slide {
+    0%, 20% { 
+      opacity: 1;
+    }
+    25%, 45% { 
+      opacity: 1;
+    }
+    50%, 70% { 
+      opacity: 1;
+    }
+    75%, 95% { 
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { 
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Smooth Scroll */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
