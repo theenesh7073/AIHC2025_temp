@@ -58,9 +58,9 @@ const Index = () => {
               </div>
               <div className="conference-card col-span-2">
                 <h3 className="text-xl font-semibold text-center mb-4">Organized By</h3>
-                <div className="flex flex-wrap justify-center items-center gap-6">
-                  <img src={nitcNewLogo} alt="NIT Calicut" className="h-16" />
-                  <img src={utahLogo} alt="University of Utah" className="h-16" />
+                <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-8 lg:gap-10">
+                  <img src={nitcNewLogo} alt="NIT Calicut" className="h-12 sm:h-14 md:h-16 max-w-[100px] sm:max-w-[120px] md:max-w-[140px]" />
+                  <img src={utahLogo} alt="University of Utah" className="h-12 sm:h-14 md:h-16 max-w-[120px] sm:max-w-[140px] md:max-w-[160px]" />
                 </div>
               </div>
             </div>
@@ -138,11 +138,11 @@ const Index = () => {
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-primary mb-12">Conference Partners</h2>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            <img src={sparcLogo} alt="SPARC" className="h-16 md:h-20" />
-            <img src={nitcNewLogo} alt="NIT Calicut" className="h-16 md:h-20" />
-            <img src={utahLogo} alt="University of Utah" className="h-16 md:h-20" />
-            <img src={moeLogo} alt="Ministry of Education" className="h-16 md:h-20" />
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-8 lg:gap-20 xl:gap-24">
+            <img src={sparcLogo} alt="SPARC" className="h-12 sm:h-14 md:h-16 lg:h-20 max-w-[120px] sm:max-w-[140px] md:max-w-[160px] lg:max-w-[200px]" />
+            <img src={nitcNewLogo} alt="NIT Calicut" className="h-12 sm:h-14 md:h-16 lg:h-20 max-w-[120px] sm:max-w-[140px] md:max-w-[160px] lg:max-w-[200px]" />
+            <img src={utahLogo} alt="University of Utah" className="h-12 sm:h-14 md:h-16 lg:h-20 max-w-[140px] sm:max-w-[160px] md:max-w-[180px] lg:max-w-[220px]" />
+            <img src={moeLogo} alt="Ministry of Education" className="h-12 sm:h-14 md:h-16 lg:h-20 max-w-[120px] sm:max-w-[140px] md:max-w-[160px] lg:max-w-[200px]" />
           </div>
         </div>
       </section>
