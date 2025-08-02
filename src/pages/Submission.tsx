@@ -50,6 +50,7 @@ const Submission = () => {
           <div className="bg-yellow-50 p-6 rounded-lg mb-8">
             <h3 className="text-xl font-bold text-gray-800 mb-4">Submission Guidelines</h3>
             <ol className="list-decimal list-inside space-y-3 text-gray-700">
+              <li>The manuscript has to be uploaded online at the AIHC 2025 Microsoft CMT Research paper submission portal at the following link: (Link will be updated soon)</li>
               <li>When submitting a paper to AIHC 2025, rename the file as PaperID.pdf before uploading.</li>
               <li>Authors are required to specify one or more keywords from the list of topics outlined in the CFP.</li>
               <li>In submitting a manuscript to AIHC-2025, authors acknowledge that no paper substantially similar in content has been or will be submitted to another journal, conference or workshop during the review period. In such a case the paper will be rejected without review.</li>
