@@ -13,7 +13,8 @@ import Visa from "./pages/Visa";
 import OrganizingCommittee from "./pages/OrganizingCommittee";
 import AdvisoryCommittee from "./pages/AdvisoryCommittee";
 import ProgramCommittee from "./pages/ProgramCommittee";
-import AreaChairs from "./pages/AreaChairs";
+import Registration from "./pages/Registration";
+
 import Accommodation from "./pages/Accommodation";
 import Venue from "./pages/Venue";
 
@@ -28,6 +29,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/submission" element={<Submission />} />
+          <Route path="/registration" element={<Registration />} />
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
@@ -35,7 +37,7 @@ const App = () => (
           <Route path="/organizing-committee" element={<OrganizingCommittee />} />
           <Route path="/advisory-committee" element={<AdvisoryCommittee />} />
           <Route path="/program-committee" element={<ProgramCommittee />} />
-          <Route path="/area-chairs" element={<AreaChairs />} />
+
           <Route path="/accommodation" element={<Accommodation />} />
           <Route path="/venue" element={<Venue />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

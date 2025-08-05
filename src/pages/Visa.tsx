@@ -1,16 +1,18 @@
 import Header from "@/components/Header";
-import TopBar from "@/components/TopBar";
 import BackToTop from "@/components/BackToTop";
+import Footer from "@/components/Footer";
 
 const Visa = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <TopBar />
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-[#2c2c7a] text-white py-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold">Visa Information</h1>
+      <section className="bg-primary text-white py-16 relative">
+        <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-8">Visa Information</h1>
+        </div>
       </section>
 
       {/* Content Section */}
@@ -25,6 +27,7 @@ const Visa = () => {
           </p>
         </div>
       </section>
+      <Footer />
       <BackToTop />
     </div>
   );

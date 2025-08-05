@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
-import TopBar from "@/components/TopBar";
 import BackToTop from "@/components/BackToTop";
+import Footer from "@/components/Footer";
 import { useEffect } from "react";
 
 const Sponsorship = () => {
@@ -11,7 +11,6 @@ const Sponsorship = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <TopBar />
       <Header />
       
       {/* Hero Section */}
@@ -34,7 +33,7 @@ const Sponsorship = () => {
           </a>
         </div>
       </section>
-
+      <Footer />
       <BackToTop />
     </div>
   );

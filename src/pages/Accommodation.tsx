@@ -1,26 +1,17 @@
 import Header from "@/components/Header";
-import TopBar from "@/components/TopBar";
 import BackToTop from "@/components/BackToTop";
+import Footer from "@/components/Footer";
 
 const Accommodation = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <TopBar />
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16 relative overflow-hidden">
-        {/* Decorative dots pattern */}
-        <div className="absolute top-4 left-4 w-32 h-32 opacity-20">
-          <div className="grid grid-cols-8 gap-1">
-            {[...Array(64)].map((_, i) => (
-              <div key={i} className="w-1 h-1 bg-white rounded-full"></div>
-            ))}
-          </div>
-        </div>
-        
+      <section className="bg-primary text-white py-16 relative">
+        <div className="absolute inset-0 bg-black bg-opacity-10"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Accommodation</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-8">Accommodation</h1>
         </div>
       </section>
 
@@ -51,7 +42,7 @@ const Accommodation = () => {
           </div>
         </div>
       </section>
-
+      <Footer />
       <BackToTop />
     </div>
   );

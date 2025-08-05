@@ -1,12 +1,11 @@
 import Header from "@/components/Header";
-import TopBar from "@/components/TopBar";
 import BackToTop from "@/components/BackToTop";
+import Footer from "@/components/Footer";
 import nitCalicutImg from "../../nitc campus.jpg";
 
 const Venue = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <TopBar />
       <Header />
       {/* Hero Section with Background Image */}
       <section
@@ -46,6 +45,7 @@ const Venue = () => {
           </a>
         </div>
       </section>
+      <Footer />
       <BackToTop />
     </div>
   );

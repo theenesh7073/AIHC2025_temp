@@ -1,27 +1,18 @@
 import Header from "@/components/Header";
-import TopBar from "@/components/TopBar";
 import BackToTop from "@/components/BackToTop";
+import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 const Submission = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <TopBar />
+    <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="bg-primary text-white py-16 relative">
-        <div className="absolute inset-0 bg-black bg-opacity-10"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8">Submission</h1>
-          <button 
-            disabled
-            className="bg-gray-400 text-gray-600 px-8 py-3 rounded-md font-medium cursor-not-allowed opacity-60 inline-block"
-          >
-            Submit your Paper
-          </button>
-          <p className="text-lg mt-4 text-gray-200">Scheduled to commence shortly</p>
-        </div>
-      </section>
+      <PageHero 
+        title="Paper Submission"
+        subtitle="Submit Your Research"
+        description="Share your innovative research in artificial intelligence for healthcare at AIHC 2025."
+      />
 
       {/* Main Content */}
       <section className="py-16 bg-white">
@@ -46,6 +37,54 @@ const Submission = () => {
             </ol>
           </div>
 
+          {/* How to Submit */}
+          <div className="bg-blue-50 p-6 rounded-lg mb-8">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">How to Submit</h3>
+            <div className="space-y-4 text-gray-700">
+              <p className="leading-relaxed">
+                Before submitting your paper, you will need to have a CMT account. Please ensure you have created your account before attempting to submit your paper.
+              </p>
+              
+              <div className="space-y-3">
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                  <h4 className="font-semibold text-blue-800 mb-2">Create CMT Account</h4>
+                  <p className="text-sm text-gray-600 mb-3">
+                    If you don't have a CMT account yet, please create one using the following link:
+                  </p>
+                  <a 
+                    href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    <span>Create CMT Account</span>
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+                
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                  <h4 className="font-semibold text-blue-800 mb-2">Submit Your Paper</h4>
+                  <p className="text-sm text-gray-600 mb-3">
+                    Once you have a CMT account, you can submit your paper using the following guide:
+                  </p>
+                  <a 
+                    href="https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    <span>Author Submission Guide</span>
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Submission Guidelines */}
           <div className="bg-yellow-50 p-6 rounded-lg mb-8">
             <h3 className="text-xl font-bold text-gray-800 mb-4">Submission Guidelines</h3>
@@ -53,6 +92,8 @@ const Submission = () => {
               <li>The manuscript has to be uploaded online at the AIHC 2025 Microsoft CMT Research paper submission portal at the following link: (Link will be updated soon)</li>
               <li>When submitting a paper to AIHC 2025, rename the file as PaperID.pdf before uploading.</li>
               <li>Authors are required to specify one or more keywords from the list of topics outlined in the CFP.</li>
+              <li>All submissions must be written in English only. Papers submitted in any other language will not be considered for review.</li>
+              <li>All submissions will be checked for plagiarism using appropriate software. Papers with significant plagiarism will be rejected without review. Authors are responsible for ensuring the originality of their work and proper citation of all sources.</li>
               <li>In submitting a manuscript to AIHC-2025, authors acknowledge that no paper substantially similar in content has been or will be submitted to another journal, conference or workshop during the review period. In such a case the paper will be rejected without review.</li>
               <li>At least one author of each accepted paper must complete the registration process at a non-student rate, in order to ensure inclusion of the paper in the conference proceedings.</li>
               <li>Students must include a letter from the Head of the Institute/ Dean/ Department authenticating their full-time student status.</li>
@@ -67,25 +108,31 @@ const Submission = () => {
           {/* Important Dates */}
           <div className="bg-red-50 p-8 rounded-lg mb-8 shadow-lg border-2 border-red-200">
             <h3 className="text-2xl font-bold text-center mb-6 text-red-800">Important Dates</h3>
-            <div className="grid md:grid-cols-2 gap-6 text-center">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
               <div className="space-y-4">
                 <div className="bg-white p-4 rounded-lg border border-red-200">
-                  <p className="text-lg font-semibold text-red-700">Paper submission</p>
+                  <p className="text-lg font-semibold text-red-700">Paper Submission Deadline</p>
                   <p className="text-2xl font-bold text-red-800">August 31, 2025</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg border border-red-200">
-                  <p className="text-lg font-semibold text-red-700">Acceptance notification</p>
+                  <p className="text-lg font-semibold text-red-700">Acceptance Notification</p>
                   <p className="text-2xl font-bold text-red-800">October 15, 2025</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="bg-white p-4 rounded-lg border border-red-200">
-                  <p className="text-lg font-semibold text-red-700">Camera-ready submission</p>
-                  <p className="text-2xl font-bold text-red-800">Nov 01, 2025</p>
+                  <p className="text-lg font-semibold text-red-700">Camera-Ready Submission</p>
+                  <p className="text-2xl font-bold text-red-800">November 1, 2025</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg border border-red-200">
+                  <p className="text-lg font-semibold text-red-700">Author Registration Deadline</p>
+                  <p className="text-2xl font-bold text-red-800">November 5, 2025</p>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="bg-white p-4 rounded-lg border border-red-200">
                   <p className="text-lg font-semibold text-red-700">Conference</p>
-                  <p className="text-2xl font-bold text-red-800">Dec 10-12, 2025</p>
+                  <p className="text-2xl font-bold text-red-800">December 10-12, 2025</p>
                 </div>
               </div>
             </div>
@@ -102,6 +149,7 @@ const Submission = () => {
         </div>
       </section>
 
+      <Footer />
       <BackToTop />
     </div>
   );

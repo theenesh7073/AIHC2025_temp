@@ -33,25 +33,25 @@ const CountdownTimer = () => {
   const formatNumber = (num: number) => num.toString().padStart(2, '0');
 
   return (
-    <section className="bg-primary text-primary-foreground py-8">
+    <section className="bg-primary text-primary-foreground py-4">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold text-center mb-6">Conference Countdown</h2>
-        <div className="flex justify-center items-center space-x-8">
+        <h2 className="text-lg font-bold text-center mb-4">Conference Countdown</h2>
+        <div className="flex justify-center items-center space-x-6">
           <div className="countdown-item">
-            <div className="text-4xl font-bold text-center">{formatNumber(timeLeft.days)}</div>
-            <div className="text-sm text-center">Days</div>
+            <div className="text-2xl font-bold text-center">{formatNumber(timeLeft.days)}</div>
+            <div className="text-xs text-center">Days</div>
           </div>
           <div className="countdown-item">
-            <div className="text-4xl font-bold text-center">{formatNumber(timeLeft.hours)}</div>
-            <div className="text-sm text-center">Hours</div>
+            <div className="text-2xl font-bold text-center">{formatNumber(timeLeft.hours)}</div>
+            <div className="text-xs text-center">Hours</div>
           </div>
           <div className="countdown-item">
-            <div className="text-4xl font-bold text-center">{formatNumber(timeLeft.minutes)}</div>
-            <div className="text-sm text-center">Minutes</div>
+            <div className="text-2xl font-bold text-center">{formatNumber(timeLeft.minutes)}</div>
+            <div className="text-xs text-center">Minutes</div>
           </div>
           <div className="countdown-item">
-            <div className="text-4xl font-bold text-center">{formatNumber(timeLeft.seconds)}</div>
-            <div className="text-sm text-center">Seconds</div>
+            <div className="text-2xl font-bold text-center">{formatNumber(timeLeft.seconds)}</div>
+            <div className="text-xs text-center">Seconds</div>
           </div>
         </div>
       </div>

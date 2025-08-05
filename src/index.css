@@ -63,12 +63,21 @@
 @layer base {
   * {
     @apply border-border;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
   }
   
   body {
     @apply bg-background text-foreground;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    padding-top: 60px; /* Adjusted for logo bar only on mobile */
+    margin: 0;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -93,25 +102,6 @@
   
   .dropdown-menu {
     @apply bg-card border border-border shadow-lg rounded-lg z-50;
-  }
-  
-  /* Mobile Menu Animation */
-  .mobile-menu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    border-top: 2px solid hsl(var(--primary));
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    z-index: 1000;
-  }
-  
-  .mobile-menu.open {
-    max-height: 1000px;
   }
   
   /* Countdown Timer */

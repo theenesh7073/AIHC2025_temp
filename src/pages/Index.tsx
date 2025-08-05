@@ -1,17 +1,15 @@
-import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import CountdownTimer from "@/components/CountdownTimer";
 import BackToTop from "@/components/BackToTop";
 import nitcNewLogo from "@/assets/nitc-new.jpeg";
-import utahLogo from "@/assets/university-of-utah.jpeg";
+import utahLogo from "@/assets/university-of-utah.jpg";
 import sparcLogo from "@/assets/sparc-logo.jpeg";
 import moeLogo from "@/assets/moe-logo.png";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <TopBar />
+    <div className="min-h-screen bg-background m-0">
       <Header />
       <HeroSection />
       <CountdownTimer />
@@ -60,6 +58,7 @@ const Index = () => {
                 <h3 className="text-xl font-semibold text-center mb-4">Organized By</h3>
                 <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-8 lg:gap-10">
                   <img src={nitcNewLogo} alt="NIT Calicut" className="h-12 sm:h-14 md:h-16 max-w-[100px] sm:max-w-[120px] md:max-w-[140px]" />
+                  <img src={sparcLogo} alt="SPARC" className="h-12 sm:h-14 md:h-16 max-w-[100px] sm:max-w-[120px] md:max-w-[140px]" />
                   <img src={utahLogo} alt="University of Utah" className="h-12 sm:h-14 md:h-16 max-w-[120px] sm:max-w-[140px] md:max-w-[160px]" />
                 </div>
               </div>
@@ -97,42 +96,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Important Dates */}
-      <section className="py-16 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-primary mb-12">Important Dates</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="date-card">
-              <h3 className="text-xl font-semibold mb-2">Submission Deadline</h3>
-              <p className="text-muted-foreground mb-2">31st August, 2025</p>
-              <div className="progress-bar">
-                <div className="progress-fill" style={{ width: '25%' }}></div>
-              </div>
-            </div>
-            <div className="date-card">
-              <h3 className="text-xl font-semibold mb-2">Acceptance Notification</h3>
-              <p className="text-muted-foreground mb-2">15th October, 2025</p>
-              <div className="progress-bar">
-                <div className="progress-fill" style={{ width: '15%' }}></div>
-              </div>
-            </div>
-            <div className="date-card">
-              <h3 className="text-xl font-semibold mb-2">Camera Ready Submission</h3>
-              <p className="text-muted-foreground mb-2">1st November, 2025</p>
-              <div className="progress-bar">
-                <div className="progress-fill" style={{ width: '10%' }}></div>
-              </div>
-            </div>
-            <div className="date-card">
-              <h3 className="text-xl font-semibold mb-2">Conference</h3>
-              <p className="text-muted-foreground mb-2">10-12 December, 2025</p>
-              <div className="progress-bar">
-                <div className="progress-fill" style={{ width: '5%' }}></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Partners Section */}
       <section className="py-16 bg-card">
