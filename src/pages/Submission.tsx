@@ -12,7 +12,15 @@ const Submission = () => {
         title="Paper Submission"
         subtitle="Submit Your Research"
         description="Share your innovative research in artificial intelligence for healthcare at AIHC 2025."
-      />
+      >
+        <button 
+          disabled
+          className="bg-gray-400 text-gray-600 px-8 py-3 rounded-md font-medium cursor-not-allowed opacity-60 inline-block"
+        >
+          Submit Paper
+        </button>
+        <p className="text-lg mt-4 text-gray-200">Scheduled to commence soon</p>
+      </PageHero>
 
       {/* Main Content */}
       <section className="py-16 bg-white">
@@ -28,59 +36,155 @@ const Submission = () => {
           {/* Preparation Guidelines */}
           <div className="bg-green-50 p-6 rounded-lg mb-8">
             <h3 className="text-xl font-bold text-gray-800 mb-4">Preparation Guidelines</h3>
-            <ol className="list-decimal list-inside space-y-3 text-gray-700">
-              <li>The paper must not exceed 8 pages in length (including all text, figures, and references) prepared according to the templates.</li>
-              <li>The manuscript must be submitted in pdf format only and the file size of your manuscript should not exceed 10 MB.</li>
-              <li>Use a proper tool to convert the resulting source into a pdf document that has only scalable fonts with all fonts embedded.</li>
-              <li>The pdf manuscript must not have Document Protection or Document Security enabled.</li>
-              <li>The manuscript has to be uploaded at the paper submission portal at the submission link (will be updated soon).</li>
-            </ol>
+            
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-3">1. Manuscript Preparation</h4>
+                <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                  <li><strong>Templates:</strong> Use the official AIHC 2025 template — available in Overleaf (LaTeX) and Word formats.</li>
+                  <li><strong>Fonts:</strong> Times-like serif (Times New Roman / newtxtext+newtxmath in LaTeX).</li>
+                  <li><strong>Figures/Tables:</strong>
+                    <ul className="list-disc list-inside ml-6 mt-1 space-y-1">
+                      <li>Figures ≥ 300 DPI or vector (.pdf, .eps)</li>
+                      <li>Use booktabs for tables; no vertical lines</li>
+                      <li>Captions placed directly below figures/tables</li>
+                    </ul>
+                  </li>
+                  <li><strong>Equations:</strong> Number sequentially, align to the right.</li>
+                  <li><strong>Language:</strong> English only; check grammar and spelling.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-3">2. Anonymization (Double-Blind Review)</h4>
+                <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                  <li>Remove author names, affiliations, acknowledgments, and self-identifying references.</li>
+                  <li>Avoid links to repositories that reveal identity; use anonymized links if necessary.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-3">3. File Format & Submission</h4>
+                <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                  <li><strong>File name:</strong> AIHC2025_PaperID.pdf (Paper ID assigned by CMT)</li>
+                  <li>The paper must not exceed 8 pages in length (including all text, figures, and references)</li>
+                  <li>The manuscript must be submitted in PDF format only and the file size should not exceed 10 MB</li>
+                  <li>Use a proper tool to convert the resulting source into a PDF document that has only scalable fonts with all fonts embedded</li>
+                  <li>The PDF manuscript must not have Document Protection or Document Security enabled</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* How to Submit */}
           <div className="bg-blue-50 p-6 rounded-lg mb-8">
             <h3 className="text-xl font-bold text-gray-800 mb-4">How to Submit</h3>
-            <div className="space-y-4 text-gray-700">
-              <p className="leading-relaxed">
-                Before submitting your paper, you will need to have a CMT account. Please ensure you have created your account before attempting to submit your paper.
-              </p>
+            <div className="space-y-6 text-gray-700">
               
-              <div className="space-y-3">
-                <div className="bg-white p-4 rounded-lg border border-blue-200">
-                  <h4 className="font-semibold text-blue-800 mb-2">Create CMT Account</h4>
-                  <p className="text-sm text-gray-600 mb-3">
-                    If you don't have a CMT account yet, please create one using the following link:
-                  </p>
-                  <a 
-                    href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-                  >
-                    <span>Create CMT Account</span>
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
+              <div className="bg-white p-6 rounded-lg border border-blue-200">
+                <h4 className="font-semibold text-blue-800 mb-4 text-lg">Submission Steps in CMT</h4>
                 
-                <div className="bg-white p-4 rounded-lg border border-blue-200">
-                  <h4 className="font-semibold text-blue-800 mb-2">Submit Your Paper</h4>
-                  <p className="text-sm text-gray-600 mb-3">
-                    Once you have a CMT account, you can submit your paper using the following guide:
-                  </p>
-                  <a 
-                    href="https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-                  >
-                    <span>Author Submission Guide</span>
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-semibold text-gray-800 mb-2">Step 1 — Access the AIHC 2025 Submission Portal</h5>
+                    <div className="bg-blue-50 p-3 rounded border-l-4 border-blue-400 mb-3">
+                      <a 
+                        href="https://cmt3.research.microsoft.com/AIHC2025" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        https://cmt3.research.microsoft.com/AIHC2025
+                      </a>
+                    </div>
+                    <p className="text-sm text-gray-600">OR</p>
+                    <p className="text-sm">Open your web browser and go to the Microsoft CMT homepage: <a href="https://cmt3.research.microsoft.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">https://cmt3.research.microsoft.com/</a></p>
+                    <ul className="list-disc list-inside ml-4 mt-2 text-sm space-y-1">
+                      <li>If you already have a CMT account, click Sign in.</li>
+                      <li>If you don't have an account, click Register and create one using your email.</li>
+                      <li>You can sign in with a Microsoft, Google, or ORCID account.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h5 className="font-semibold text-gray-800 mb-2">Step 2 — Find the AIHC 2025 conference</h5>
+                    <ul className="list-disc list-inside ml-4 text-sm space-y-1">
+                      <li>Once signed in, go to the All Conferences tab in the top navigation bar.</li>
+                      <li>In the search box, type AIHC 2025.</li>
+                      <li>Click the conference name AIHC 2025 – International Conference on Artificial Intelligence for Healthcare to open its submission page.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h5 className="font-semibold text-gray-800 mb-2">Step 3 — Start a new submission</h5>
+                    <ul className="list-disc list-inside ml-4 text-sm space-y-1">
+                      <li>On the conference page, click Create new submission.</li>
+                      <li>The submission form will open with multiple sections.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h5 className="font-semibold text-gray-800 mb-2">Step 4 — Fill in submission details</h5>
+                    <ul className="list-disc list-inside ml-4 text-sm space-y-1">
+                      <li><strong>Title</strong> — Enter your paper title exactly as it appears in your manuscript.</li>
+                      <li><strong>Abstract</strong> — Paste the abstract text from your paper (no special formatting needed).</li>
+                      <li><strong>Authors</strong> — Add all co-authors:
+                        <ul className="list-disc list-inside ml-6 mt-1">
+                          <li>Click Add Author for each co-author.</li>
+                          <li>Fill in their first name, last name, email, and affiliation.</li>
+                          <li>The presenting author can be marked if required.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Keywords</strong> — Enter keywords relevant to your paper; choose from the provided list or add your own.</li>
+                      <li><strong>Track selection</strong> — Select the most relevant conference track (choose one of the five AIHC 2025 tracks).</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h5 className="font-semibold text-gray-800 mb-2">Step 5 — Upload your file</h5>
+                    <ul className="list-disc list-inside ml-4 text-sm space-y-1">
+                      <li>Scroll down to the Files section.</li>
+                      <li>Click Upload from Computer and select your PDF file.</li>
+                      <li>Ensure your file follows all AIHC 2025 formatting rules.</li>
+                      <li>The file must have embedded fonts and no password protection.</li>
+                      <li>File name format: AIHC2025_PaperID.pdf (Paper ID will be shown after you start submission — rename and re-upload if needed).</li>
+                      <li>Wait for the upload to complete. The file name should appear under the upload box.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h5 className="font-semibold text-gray-800 mb-2">Step 6 — Review and submit</h5>
+                    <ul className="list-disc list-inside ml-4 text-sm space-y-1">
+                      <li>Review all fields carefully for accuracy — especially title, author list, and uploaded file.</li>
+                      <li>Click Submit at the bottom of the page.</li>
+                      <li>After submission, you will see a confirmation page with your Paper ID.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h5 className="font-semibold text-gray-800 mb-2">Step 7 — Update or revise your submission (before the deadline)</h5>
+                    <p className="text-sm mb-2">To replace your paper:</p>
+                    <ul className="list-disc list-inside ml-4 text-sm space-y-1">
+                      <li>Go to the Author Console in CMT.</li>
+                      <li>Find your submission in the list.</li>
+                      <li>Click Edit Submission → upload the new PDF.</li>
+                      <li>Ensure any revised version is submitted before the official deadline.</li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
+
+              <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <h5 className="font-semibold text-yellow-800 mb-3">Checklist before you click Submit</h5>
+                <ul className="list-disc list-inside space-y-1 text-sm">
+                  <li>Paper is anonymized (if in review phase).</li>
+                  <li>File is in PDF format.</li>
+                  <li>Maximum length: 8 pages including references.</li>
+                  <li>Fonts are embedded, no watermarks, no password.</li>
+                  <li>Figures/tables clear and readable.</li>
+                  <li>Keywords and track selected correctly.</li>
+                  <li>All co-authors added in CMT.</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -89,13 +193,14 @@ const Submission = () => {
           <div className="bg-yellow-50 p-6 rounded-lg mb-8">
             <h3 className="text-xl font-bold text-gray-800 mb-4">Submission Guidelines</h3>
             <ol className="list-decimal list-inside space-y-3 text-gray-700">
-              <li>The manuscript has to be uploaded online at the AIHC 2025 Microsoft CMT Research paper submission portal at the following link: (Link will be updated soon)</li>
-              <li>When submitting a paper to AIHC 2025, rename the file as PaperID.pdf before uploading.</li>
+              <li>The manuscript has to be uploaded online at the AIHC 2025 Microsoft CMT Research paper submission portal at the following link: <a href="https://cmt3.research.microsoft.com/AIHC2025" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">https://cmt3.research.microsoft.com/AIHC2025</a></li>
+              <li>When submitting a paper to AIHC 2025, rename the file as AIHC2025_PaperID.pdf before uploading (Paper ID will be assigned by CMT).</li>
               <li>Authors are required to specify one or more keywords from the list of topics outlined in the CFP.</li>
               <li>All submissions must be written in English only. Papers submitted in any other language will not be considered for review.</li>
               <li>All submissions will be checked for plagiarism using appropriate software. Papers with significant plagiarism will be rejected without review. Authors are responsible for ensuring the originality of their work and proper citation of all sources.</li>
               <li>In submitting a manuscript to AIHC-2025, authors acknowledge that no paper substantially similar in content has been or will be submitted to another journal, conference or workshop during the review period. In such a case the paper will be rejected without review.</li>
               <li>At least one author of each accepted paper must complete the registration process at a non-student rate, in order to ensure inclusion of the paper in the conference proceedings.</li>
+              <li><strong>Presentation of the paper by an author is mandatory for inclusion in the conference proceedings.</strong></li>
               <li>Students must include a letter from the Head of the Institute/ Dean/ Department authenticating their full-time student status.</li>
               <li>Authors with affiliation other than Indian institutions must register in USD.</li>
               <li>In case of multiple papers by an author, each additional paper (maximum of 2 papers) would be subjected to additional registration charge at reduced rate.</li>
@@ -138,13 +243,13 @@ const Submission = () => {
             </div>
           </div>
 
-          {/* Microsoft CMT Service */}
+          {/* Microsoft CMT Service
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Review Process</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-4">ACKNOWLEDGMENT</h3>
             <p className="text-gray-700 leading-relaxed">
               The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
             </p>
-          </div>
+          </div> */}
 
         </div>
       </section>

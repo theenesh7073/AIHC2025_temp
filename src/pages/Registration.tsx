@@ -74,6 +74,13 @@ const Registration = () => {
       lateRegistrationINR: "-",
       earlyBirdUSD: "$50",
       lateRegistrationUSD: "$75"
+    },
+    {
+      category: "Each Additional Page (exceeding the 8-page limit : atmost 2 pages)",
+      earlyBirdINR: "₹1,000",
+      lateRegistrationINR: "₹1,000",
+      earlyBirdUSD: "$15",
+      lateRegistrationUSD: "$15"
     }
   ];
 

@@ -12,6 +12,9 @@ import chandramaniChoudhary from "@/assets/Organizing Committee/Chandramani Chau
 import subashiniR from "@/assets/Organizing Committee/Subashini R.png";
 import sathideviPS from "@/assets/Organizing Committee/Dr. Sathidevi P S.png";
 import sudhishNGeorge from "@/assets/Organizing Committee/Dr. Sudhish N George , NIT Calicut (CCESD).png";
+import chithraAV from "@/assets/Organizing Committee/Chitra S.jpg";
+import basilKuriachen from "@/assets/Organizing Committee/Dr. Basil Kuriachen.jpg";
+import parameswaranP from "@/assets/Organizing Committee/Parameswaran P.jpg";
 
 const OrganizingCommittee = () => {
   const committeeMembers = [
@@ -54,6 +57,21 @@ const OrganizingCommittee = () => {
       name: "Dr. Sudhish N George",
       affiliation: "NIT Calicut (CCESD)",
       image: sudhishNGeorge
+    },
+    {
+      name: "Prof. Parameswaran P",
+      affiliation: "NIT Calicut",
+      image: parameswaranP
+    },
+    {
+      name: "Dr. Basil Kuriachen",
+      affiliation: "NIT Calicut",
+      image: basilKuriachen
+    },
+    {
+      name: "Dr. Chithra A V",
+      affiliation: "NIT Calicut",
+      image: chithraAV
     }
   ];
 

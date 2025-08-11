@@ -53,6 +53,15 @@ import muthukumaraswamy from "@/assets/Photos_Keynote speakers/Muthukumaraswamy.
 import henryPrakash from "@/assets/Photos_Keynote speakers/henry prakash.jpg";
 import niyasUmmer from "@/assets/Photos_Keynote speakers/niyas ummer.png";
 import madhushree from "@/assets/Photos_Keynote speakers/Madhushree.jpg";
+import drDineshM from "@/assets/Photos_Keynote speakers/Dr. Dinesh M.jpg";
+import vinuJoseph from "@/assets/Photos_Keynote speakers/vinu joseph.png";
+import anubhaGupta from "@/assets/Photos_Keynote speakers/Anubha Gupta.jpg";
+import ksShaji from "@/assets/Photos_Keynote speakers/Prof. Dr. K S Shaji.jpg";
+import venkatRamana from "@/assets/Photos_Keynote speakers/Venkat Ramana.jpg";
+import rajendraSisodia from "@/assets/Photos_Keynote speakers/Rajendra Singh Sisodia.jpg";
+import josephSureshPaul from "@/assets/Photos_Keynote speakers/Dr. Joseph Suresh Paul.png";
+import drCChandraSekhar from "@/assets/Photos_Keynote speakers/Dr. C. Chandra Sekhar.jpg";
+import pankajBhardwaj from "@/assets/Photos_Keynote speakers/pankaj bharadwaj.jpg";
 
 const Speakers = () => {
   const speakers = [
@@ -457,6 +466,78 @@ const Speakers = () => {
       country: "India",
       image: joseJoseph,
       website: "https://www.linkedin.com/in/jose-joseph-ph-d-080a2356/"
+    },
+    {
+      name: "Dr. Dinesh M",
+      designation: "Professor & HoD, Radiation Oncology",
+      affiliation: "Yenepoya Medical College",
+      country: "India",
+      image: drDineshM,
+      website: "https://www.linkedin.com/in/dinesh-makuny-a6944226a/?originalSubdomain=in"
+    },
+    {
+      name: "Vinu Joseph",
+      designation: "Senior Research Scientist",
+      affiliation: "NVIDIA",
+      country: "USA",
+      image: vinuJoseph,
+      website: "https://research.nvidia.com/person/vinu-joseph"
+    },
+    {
+      name: "Anubha Gupta",
+      designation: "Professor (ECE, CSE)",
+      affiliation: "IIIT Delhi",
+      country: "India",
+      image: anubhaGupta,
+      website: "https://www.iiitd.ac.in/anubha"
+    },
+    {
+      name: "Prof. Dr. K S Shaji",
+      designation: "Dean (Research)",
+      affiliation: "Kerala University of Health Sciences",
+      country: "India",
+      image: ksShaji,
+      website: "https://www.linkedin.com/in/shaji-ks-6673a424/?originalSubdomain=in"
+    },
+    {
+      name: "Venkat Ramana",
+      designation: "Director, HPC & AI",
+      affiliation: "Micropoint Computers Ltd.",
+      country: "India",
+      image: venkatRamana,
+      website: "https://www.linkedin.com/in/venkat-ramana-b42390158/?originalSubdomain=in"
+    },
+    {
+      name: "Rajendra Singh Sisodia",
+      designation: "Director, Data Science & AI Engineering",
+      affiliation: "Philips",
+      country: "India",
+      image: rajendraSisodia,
+      website: "https://www.linkedin.com/in/rajendra-singh-sisodia-9905a129/?originalSubdomain=in"
+    },
+    {
+      name: "Dr. Joseph Suresh Paul",
+      designation: "Professor, Medical Image Computing & Signal Processing Group",
+      affiliation: "Digital University Kerala",
+      country: "India",
+      image: josephSureshPaul,
+      website: "https://duk.ac.in/personnel/dr-joseph-suresh-paul-2/#"
+    },
+    {
+      name: "Dr. C. Chandra Sekhar",
+      designation: "Professor, Dept. of CSE",
+      affiliation: "IIT Madras",
+      country: "India",
+      image: drCChandraSekhar,
+      website: "https://www.cse.iitm.ac.in/profile.php?arg=Nw=="
+    },
+    {
+      name: "Prof. Pankaj Bhardwaj",
+      designation: "Professor & Academic Head, School of Public Health",
+      affiliation: "AIIMS Jodhpur",
+      country: "India",
+      image: pankajBhardwaj,
+      website: "https://www.linkedin.com/in/pankaj-bhardwaj-0032a334/"
     }
   ];
 
